@@ -1,0 +1,131 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, i, b {
+			margin: 0;
+			padding: 0;
+		}
+input{ outline:none;}
+a{ text-decoration:none; cursor:pointer; color:#33cb98;}
+ul li{ list-style:none;}
+header{ 
+	width:100%;
+	height:80px;
+	border-bottom:1px solid #ccc;
+	box-shadow:0 1px 2px #ccc;
+	color:#33cb98;
+}
+.col{ color:#3879D9;}
+.txc{ text-align:center;}
+.iblock{ display:inline-block;}
+.block{ display:block;}
+.pab{ position:absolute;}
+.prel{ position:relative;}
+.fl{ float:left;}
+.fr{ float:right;}
+.ml30{ margin-left:30px;}
+.cur{ cursor:pointer;}
+.top_log{
+	width:150px;
+	height:80px;
+	text-align:center;
+	line-height:80px;
+	font-size:25px;
+}
+.top_center li{
+	width:80px;
+	height:80px;
+	text-align:center;
+	line-height:80px;
+	margin:0px 15px;
+
+}
+.top_right li{ 
+	height:80px;
+	text-align:center;
+	line-height:80px;
+	margin:0px 15px;
+}
+.top_right img{ 
+	height:10px;
+	width:13px;
+	-webkit-transition:all .3s;
+	-moz-transition:all .3s;
+	-o-transition:all .3s;
+	transition:all .3s;
+}
+.top_right:hover img{ 
+	transform:rotate(180deg);
+}
+.top_extra{
+	top:80px;
+	right:0px;
+	display:none;
+	border-bottom:1px solid #ccc;
+	box-shadow:0 1px 2px #ccc;
+}
+.top_extra li{
+	padding:10px 0;
+	width:100px;
+	height:20px;
+	line-height:20px;
+	cursor:pointer;
+}
+.top_right:hover .top_extra{ 
+	display:block;
+}
+.top_extra li:hover{ 
+	color:#ccc;
+}
+.top_extra li:hover a{ 
+	color:#ccc;
+}
+section{ 
+	width:100%;
+}
+.cue{ 
+	margin:30px;
+	height:500px;
+	text-align:center;
+}
+.cue h1{ 
+	font-size:80px;
+	color:#33cb98;
+}
+.cue p{ 
+	font-size:30px;
+}
+.cue img{
+	margin-top: 30px;
+	height:300px;
+}
+.top_center li:hover{ 
+	background:#33cb98;	
+}
+.top_center li:hover a{ 
+	color:#fff;
+}
+.active{ 
+	background:#33cb98;	
+}
+.active a{ 
+	color:#fff;
+}
+.home{ 
+	margin:30px;
+	height:500px;
+	background:#ccc;
+}
+.user ul{ 
+	width:100%;
+}
+.content_id{ width:25%;}
+.content_name{ width:25%;}
+.content_pass{ width:25%;}
+.content_admin{ width:25%;}
+.change{ 
+	padding:8px 5px;
+}
+.change span{ 
+	margin:0 5px;
+}
+.change a{ 
+	color:#000;
+}

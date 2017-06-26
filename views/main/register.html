@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>新用户注册</title>
+	<link rel="stylesheet" type="text/css" href="./public/css/register.css">
+	<script src="./public/js/jquery-1.7.2.min.js"></script>
+	<script src="./public/js/register.js"></script>
+</head>
+<body>
+<div class="box">
+	<header class="borbtm">
+		<div class="head_top clear">
+			<div class="fl overflow">
+				<a href="#"><img src="./public/images/cart-logo.png"></a>
+				<span><img src="./public/images/welcome.jpg"></span>
+			</div>
+			<div class="fr ft14">
+				<span class="c666">已有账号？</span>
+				<a id="skip" class="ft16 col24">登录</a>
+			</div>
+		</div>
+	</header>
+	<section class="borbtm">
+		<div class="center">
+			<div class="cen_center">
+				<div class="mb prel">
+					<span class="iblock valspan ftr ft16">手机号：</span><input id="userphone" class="userinput" type="text" name="usertel" pattern="\d{11}" placeholder="请输入手机号" />
+					<span class="block pab prompt ftc">请输入11位手机号码</span>
+					<span class="block pab via"><img src="./public/images/ok.jpg"></span>
+				</div>
+				
+				<div class="clear mb prel">
+					<span class="iblock valspan ftr ft16">验证码：</span><input id="identifying" class="userinput" type="text" name="identifying" placeholder="请输入图片内容" />
+					<div class="iblock getorder overflow">
+						<img class="imghei" src="./public/images/seccode.png">
+						<a id="transBtn" class="iblock change_a ftc c999">
+							<img class="trans" src="./public/images/renfren.jpg">
+							换一换
+						</a>
+					</div>
+					<span class="block pab prompt ftc">请输入4位验证码</span>
+					<span class="block pab via"><img src="./public//images/ok.jpg"></span>
+				</div>
+				<div class="mb prel">
+					<span class="iblock valspan ftr ft16">短信验证码：</span><input id="userchit" class="userinput" type="text" name="chit" placeholder="验证码" />
+					<a class="iblock getnews ftc c999">获取验证码</a>
+					<span class="block pab prompt ftc">请输入短信验证码</span>
+					<span class="block pab via"><img src="./public/images/ok.jpg"></span>
+				</div>
+				<div class="mb prel">
+					<span class="iblock valspan ftr ft16">用户名：</span><input id="username" class="userinput" type="text" name="username" placeholder="用户名" />
+					<span class="block pab prompt ftc">请输入4-20位用户名</span>
+					<span class="block pab via"><img src="./public/images/ok.jpg"></span>
+				</div>
+				<div class="mb prel">
+					<span class="iblock valspan ftr ft16">密码：</span><input id="userpassword" class="userinput" type="password" name="password" placeholder="密码（8-20位，区分大小写）" />
+					<span class="block pab prompt ftc">请输入8-20位密码</span>
+					<span class="block pab via"><img src="./public/images/ok.jpg"></span>
+				</div>
+				<div class="mb prel">
+					<span class="iblock valspan ftr ft16">确定密码：</span><input id="regpassword" class="userinput" type="password" name="surepassword" placeholder="确定密码" />
+					<span class="block pab prompt ftc">请输入再次输入密码</span>
+					<span class="block pab via"><img src="./public/images/ok.jpg"></span>
+				</div>
+				<div class="mb pdl prel">
+					<input type="checkbox" id="check" checked />我已阅读并接受E宠<a href="#">《用户使用协议》</a>
+					<span id="regMess" class="block pab mess"></span>
+				</div>
+				<a id="regBtn" class="iblock btn ftc ft20">立刻注册</a>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div>
+			<a class="c999" href="/admin">E宠商城 |</a>
+			<a class="c999">淘宠 |</a>
+			<a class="c999">知识 |</a>
+			<a class="c999">游戏 |</a>
+			<a class="c999">关于我们 |</a>
+			<a class="c999">联系我们</a>
+			<p class="c999">渝ICP备13005525号-2&nbsp;&nbsp;&nbsp;渝ICP备&nbsp;&nbsp;10002905   增值电信业务经营许可证：渝B2-20140042&nbsp;&nbsp;&nbsp;Copyright&nbsp;©&nbsp;2007-2016 epet.com  重庆易宠科技有限公司</p>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

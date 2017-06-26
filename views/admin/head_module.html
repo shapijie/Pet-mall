@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>后台管理</title>
+	<link rel="stylesheet" type="text/css" href="../public/css/admin_head.css">
+	<script src="/public/js/jquery-1.11.3.js"></script>
+	<script src="/public/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header class="prel">
+	<div class="top_log fl ml30">后台管理中心</div>
+	<ul class='top_center ml30 fl'>
+		<li class="fl cur"><a href="">用户管理</a></li>
+		<li class="fl cur"><a href="">分类管理</a></li>
+	</ul>
+	<ul class="top_right fr cur">
+		<li>您好，{{ userInfo.username }}<img src="../public/images/triangle.jpg"></li>
+		<ul class="top_extra pab">
+			<li>个人中心</li>
+			<li><a href="/admin">退出</a></li>
+		</ul>
+	</ul>
+</header>
+<section>
+	{% block main %}{% endblock %}
+</section>
+</body>
+</html>

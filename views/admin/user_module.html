@@ -1,0 +1,33 @@
+{% extends 'head_module.html' %}
+
+{% block main %}
+<div class="home">
+	<p class="change">
+		<a class="col" href="">用户列表</a>
+		<span>|</span>
+		<a class="" href="">管理首页</a>
+	</p>
+
+	<div class="user">
+		<h2>用户列表</h2>
+		<p>
+			<b class="block fl content_id txc">ID</b>
+			<b class="block fl content_name txc">用户名</b>
+			<b class="block fl content_pass txc">密码</b>
+			<b class="block fl content_admin txc">是否为会员</b>
+		</p>
+		<ul>
+			{% for user in users %}
+			<li>
+				<span class="block fl content_id txc">{{user._id.toString()}}</span>
+				<span class="block fl content_name txc">{{user.username}}</span>
+				<span class="block fl content_pass txc">{{user.userpassword}}</span>
+				<span class="block fl content_admin txc">{{ user.isAdmin }}</span>
+			</li>
+			{% endfor %}
+			<!--遍历后台传递过来的信息-->
+		</ul>
+	</div>
+	<div class="manage"></div>
+</div>
+{% endblock %}

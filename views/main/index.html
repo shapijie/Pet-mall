@@ -1,0 +1,5178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="public/js/jquery-1.7.2.min.js"></script>
+	<link rel="stylesheet" href="./public/css/index.css" type="text/css">
+	<link href="./public/css/city-picker.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- 头部导航栏 -->
+	<nav class="headerTop">
+		<div class="headerTop-big">
+			<div class="headerTop-left">
+				<div class="f1 t1 cblack">送至：</div>
+				<div class="container f1">
+
+					<div class="docs-methods">
+						<form class="form-inline">
+							<div id="distpicker">
+								<div class="form-group">
+									<div style="position: relative;">
+										<input id="city-picker3" class="form-control" readonly type="text" value="" data-toggle="city-picker">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+				<p class="f1 handheart"><a href="">E宠就是正品</a></p>
+				<div class="f1 t1 cltwo"><a href="">评价(<span class="clone">540.3万</span>)</a></div>
+			</div>
+			<div class="headerTop-right">
+				<ul class="htr">
+					<li><a href="" class="clthr">投诉建议</a></li>
+					<li><a href="">帮助</a></li>
+					<li>
+						<a href="">
+						<i class="iconfont icon-shouji"></i>
+						手机版
+						</a>
+					</li>
+					<li class="myea">
+						<p class="topgz">
+							<a href="">
+							收藏我
+							</a>
+							<b></b>
+						</p>
+						<div class="boxshat">
+							<div class="btno">加入收藏夹</div>
+							<div class="btnt">保存到桌面</div>
+						</div>
+					</li>
+					<li class="myec">
+						<i class="iconfont icon-47"></i>
+						<p class="topgz">
+							<a href="">
+							我的E宠
+							</a>
+							<b></b>
+						</p>
+						<div class="boxsha">
+							<ul>
+								<li><a href="">我的订单</a></li>
+								<li><a href="">VIP俱乐部</a></li>
+								<li><a href="">充值得优惠</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="">
+							<i class="iconfont icon-gouwuche"></i>
+							购物车(<span class="clone">0</span>)
+						</a>
+					</li>
+					{% if userInfo._id %}
+					<li class="newxx">
+						<i></i>
+						新消息(<span class="clone">0</span>)
+					</li>
+					<li><a href="javascript:;" id="logout">[退出]</a></li>
+					<li>{{ userInfo.username }}</li>
+					{% else %}
+					<li><a href="/register">[注册]</a></li>
+					<li><a href="/switch">[登录]</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- 头部导航栏结束 -->
+
+	<!-- 主体大块 -->
+	<main>
+		<div class="topBanner">
+			<img src="./public/images/topbanner.jpg" alt="">
+		</div>
+		<!-- 功能区 -->
+		<div class="shop">
+			<div class="shopImg">
+				<img src="./public/images/epet-logo.png" alt="">
+			</div>
+			<div class="search">
+				<form action="" method="" class="f1">
+					<input type="text" class="inpo" placeholder="冠能"><button class="btnf">搜索</button>
+					<div class="keyworks">
+						<p><label class="f1 cl1">热门搜索：</label>	
+							<a href="" class="f1 clthr">牛油果　</a>
+							<span class="f1 cl1">|</span>
+							<ul class="f1 cl1">
+								<li><a href="" class="cl1">　优卡直减200!　</a></li>
+								<li><span>|</span></li>
+								<li><a href="" class="cl1">　MAG8折起　</a></li>
+								<li><span>|</span></li>
+								<li><a href="" class="cl1">　路斯减80　</a></li>
+								<li><span>|</span></li>
+								<li><a href="" class="cl1">　宜特玩具8折</a></li>
+							</ul>
+						</p>
+					</div>
+				</form>
+			</div>
+			<div class="shopPhone">
+				
+			</div>
+			<div class="shopping">
+				<a href="">
+					购物车(<span class="clone">0</span>)
+				</a>
+			</div>
+		</div>
+
+		<div class="subnav">
+			<div class="leftsidebar">
+				<div class="lsb">
+					狗狗
+					<span>
+						<i class="iconfont icon-shuangjiantou3"></i>
+					</span>
+				</div>
+				<div class="rsb  actionp">
+					商品分类
+					<span>
+					<i class="iconfont icon-chevron-down"></i>
+					</span>
+				</div>
+			</div>
+			<ul class="rightsidebar">
+				<li><a href=""><b></b>品牌特卖</a></li>
+				<li>
+					<a href="">热卖礼包</a>
+					<img src="./public/images/new.gif"  alt="">
+				</li>
+				<li><a href=""><b></b>E宠课堂</a></li>
+				<li><a href=""><b></b>体验馆</a></li>
+				<li><a href=""><b></b>清仓特价</a></li>
+				<li><a href="">国家馆</a></li>
+			</ul>
+		</div>
+		<!-- 轮播图 -->
+		<div class="column">
+			<div class="columnbox">
+				<div class="catelist">
+					<div class="dog">
+						<a href="">
+							<span></span>
+						</a>
+						<p>20645种精选宝贝</p>
+						<a href="" class="p-link">你正在狗狗站溜达</a>
+						<img src="public/images/dog-clothype.jpg" alt="">
+					</div>
+					<div class="cat">
+						<a href="">
+							<span></span>
+						</a>
+						<p>20645种精选宝贝</p>
+						<a href="" class="p-link">点击切换</a>
+						<img src="public/images/dog-clothype.jpg" alt="">
+					</div>
+				</div>
+				<div class="dogType">
+					<ul>
+						<li>
+							<h3>
+								<span class="menuIcoBg menu1"></span>
+								<a href="" class="liwidth">
+									主粮
+									<i>2039</i>
+								</a>
+								<a href="" class="liwidth">
+									零食
+									<i>2745</i>
+								</a>
+							</h3>
+							<dl class="dlddst">
+								<dd class="ddst">
+									<img src="public/images/45dc6962de9b325eb7d0be574a54cf16.jpg" alt="">
+									<a href="">狗狗主粮</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/2593eb522ad9c0b94ad6d58f60b6587a.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">进口狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">国产狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">散装狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">处方狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddst">
+									<img src="public/images/34c6ddc2d50136bc330f6f1b82c5f8a3.jpg" alt="">
+									<a href="">狗狗零食</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/811664c9a9caa8c91469709f95e2c9d4.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">磨牙洁齿</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">肉制零食</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">奶酪布丁</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">罐头湿粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">梵米派</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<h3>
+								<span class="menuIcoBg menu2"></span>
+								<a href="" class="liwidth">
+									保健
+									<i>839</i>
+								</a>
+								<a href="" class="liwidth">
+									医疗
+									<i>840</i>
+								</a>
+							</h3>
+							<dl class="dlddst">
+								<dd class="ddst">
+									<img src="public/images/45dc6962de9b325eb7d0be574a54cf16.jpg" alt="">
+									<a href="">狗狗保健</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/2593eb522ad9c0b94ad6d58f60b6587a.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">进口狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">国产狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">散装狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">处方狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddst">
+									<img src="public/images/34c6ddc2d50136bc330f6f1b82c5f8a3.jpg" alt="">
+									<a href="">狗狗医疗</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/811664c9a9caa8c91469709f95e2c9d4.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">磨牙洁齿</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">肉制零食</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">奶酪布丁</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">罐头湿粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">梵米派</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<h3>
+								<span class="menuIcoBg menu3"></span>
+								<a href=""  class="liwidth">
+									服饰
+									<i>3834</i>
+								</a>
+								<a href=""  class="liwidth">
+									牵引
+									<i>2692</i>
+								</a>
+							</h3>
+							<dl class="dlddst">
+								<dd class="ddst">
+									<img src="public/images/45dc6962de9b325eb7d0be574a54cf16.jpg" alt="">
+									<a href="">狗狗服饰</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/2593eb522ad9c0b94ad6d58f60b6587a.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">进口狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">国产狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">散装狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">处方狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddst">
+									<img src="public/images/34c6ddc2d50136bc330f6f1b82c5f8a3.jpg" alt="">
+									<a href="">狗狗牵引</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/811664c9a9caa8c91469709f95e2c9d4.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">磨牙洁齿</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">肉制零食</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">奶酪布丁</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">罐头湿粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">梵米派</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<h3>
+								<span class="menuIcoBg menu4"></span>
+								<a href=""  class="liwidth">
+									美容
+									<i>2039</i>
+								</a>
+								<a href=""  class="liwidth">
+									香波
+									<i>1060</i>
+								</a>
+							</h3>
+							<dl class="dlddst">
+								<dd class="ddst">
+									<img src="public/images/45dc6962de9b325eb7d0be574a54cf16.jpg" alt="">
+									<a href="">狗狗美容</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/2593eb522ad9c0b94ad6d58f60b6587a.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">进口狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">国产狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">散装狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">处方狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddst">
+									<img src="public/images/34c6ddc2d50136bc330f6f1b82c5f8a3.jpg" alt="">
+									<a href="">狗狗香波</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/811664c9a9caa8c91469709f95e2c9d4.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">磨牙洁齿</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">肉制零食</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">奶酪布丁</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">罐头湿粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">梵米派</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<h3>
+								<span class="menuIcoBg menu5"></span>
+								<a href=""  class="liwidth">
+									周边
+									<i>282</i>
+								</a>
+								<a href=""  class="liwidth">
+									定制
+									<i>142</i>
+								</a>
+							</h3>
+							<dl class="dlddst">
+								<dd class="ddst">
+									<img src="public/images/45dc6962de9b325eb7d0be574a54cf16.jpg" alt="">
+									<a href="">狗狗周边</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/2593eb522ad9c0b94ad6d58f60b6587a.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">进口狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">国产狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">散装狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">处方狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddst">
+									<img src="public/images/34c6ddc2d50136bc330f6f1b82c5f8a3.jpg" alt="">
+									<a href="">狗狗定制</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/811664c9a9caa8c91469709f95e2c9d4.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">磨牙洁齿</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">肉制零食</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">奶酪布丁</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">罐头湿粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">梵米派</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<h3>
+								<span class="menuIcoBg menu6"></span>
+								<a href=""  class="liwidth">
+									日用
+									<i>3026</i>
+								</a>
+								<a href=""  class="liwidth">
+									玩具
+									<i>2237</i>
+								</a>
+							</h3>
+							<dl class="dlddst">
+								<dd class="ddst">
+									<img src="public/images/45dc6962de9b325eb7d0be574a54cf16.jpg" alt="">
+									<a href="">狗狗日用</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/2593eb522ad9c0b94ad6d58f60b6587a.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">进口狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">国产狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">散装狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">处方狗粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddst">
+									<img src="public/images/34c6ddc2d50136bc330f6f1b82c5f8a3.jpg" alt="">
+									<a href="">狗狗玩具</a>
+									<i></i>
+									<a href="">
+										<img src="public/images/811664c9a9caa8c91469709f95e2c9d4.gif" style="width: 220px;height: 35px;" alt="">
+									</a>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">磨牙洁齿</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">肉制零食</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">奶酪布丁</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">罐头湿粮</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+								<dd class="ddstyle">
+									<div class="midhead">
+										<a href="">梵米派</a>
+										<img src="public/images/0f972761c08a37c8baff88fa9302053d.jpg" alt="">
+									</div>
+									<div class="midlist">
+										<a href="">全犬粮</a>
+										<a href="">幼犬粮</a>
+										<a href="">成犬粮</a>
+										<a href="">老犬粮</a>
+										<a href="">耐吉斯</a>
+										<a href="">百利本能</a>
+									</div>
+								</dd>
+								<dd class="dotline">
+									
+								</dd>
+							</dl>
+						</li>
+
+					</ul>
+					<p class="pointer">
+						<img src="./public/images/active.png" alt="">
+						正在进行的品牌特卖
+						<a href="">17</a>
+					</p>
+				</div>
+				<div class="slideshow">
+					<div class="slidebox" id="slide">
+						<img src="./public/images/slideshow1.jpg" class="big" alt="">
+						<img src="./public/images/slideshow2.jpg" alt="">
+						<img src="./public/images/slideshow3.jpg" alt="">
+						<img src="./public/images/slideshow4.jpg" alt="">
+						<img src="./public/images/slideshow5.jpg" alt="">
+						<img src="./public/images/slideshow1.jpg" alt="">
+					</div>
+					<ul class="slideli">
+						<a href="#" class="cur">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</ul>
+				</div>
+				<div class="showlogo">
+					<div><img src="public/images/r1.jpg" alt=""></div>
+					<div><img src="public/images/r2.jpg" alt=""></div>
+					<div style="border: none"><img src="public/images/r3.jpg" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<!-- 倒计时区块 -->
+		<div class="clearfix">
+			<div class="clearbox">
+				<div class="clearleft">
+				</div>
+				<div class="clearright">
+					<div class="anli">
+						<div class="anlimenu">
+							<div class="timemenu">
+								<ul>
+									<li class="f1">
+										<div class="dib">
+											<p class="on1">09:00</p>
+											<p class="on1">进行中</p>
+											<i class="on"></i>
+										</div>
+									</li>
+									<li class="f1">
+										<div class="dib">
+											<p>11:00</p>
+											<p>即将开始</p>
+											<i></i>
+										</div>
+									</li>
+									<li class="f1">
+										<div class="dib">
+											<p>14:00</p>
+											<p>进行中</p>
+											<i></i>
+										</div>
+									</li>
+									<li class="f1">
+										<div class="dib">
+											<p>16:00</p>
+											<p>即将开始</p>
+											<i></i>
+										</div>
+									</li>
+									<li class="f1">
+										<div class="dib">
+											<p>20:00</p>
+											<p>即将开始</p>
+											<i></i>
+										</div>
+									</li>
+									<li class="f1">
+										<div class="dib">
+											<p>22:00</p>
+											<p>即将开始</p>
+											<i></i>
+										</div>
+									</li>
+									<li class="f1">
+										<div class="dib">
+											<p>明日</p>
+											<p>预告</p>
+											<i></i>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="time-proconli" id="two">
+						<!-- 9:00 -->
+						<div class="hideno" >
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic" style="width: 60%"></span>
+									</div>
+								</div>
+								<div class="mt15 ">
+									<a href="" class="buy" id="bgred">立即抢购</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/3e8a1e7f201b1ac716601383df36935a.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">MAG 犬用关节生黄金版(医院版) 1.5g*100片</div>
+									<div class="mt">
+										￥
+										<span class="ft20">99.50</span>
+										<span class="ft12">199.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic" style="width: 40%"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy" id="bgred">立即抢购</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/d8f1168e8dae5e563fffb5c5c95636c2.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">蓝氏LegendSandy 奶豆离乳期专用犬粮 1磅(0.45kg) </div>
+									<div class="mt">
+										￥
+										<span class="ft20">18.00</span>
+										<span class="ft12">30.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic" style="width: 80%"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy" id="bgred">立即抢购</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/2475c34f0f126fbbabe43b740e650d78.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">朗跃 妙鲜包鲜嫩鸭肉幼犬粮 110g </div>
+									<div class="mt">
+										￥
+										<span class="ft20">1.00</span>
+										<span class="ft12">3.30</span>
+									</div>
+									<div class="jdt">
+										<span class="dic" style="width: 25%"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy" id="bgred">立即抢购</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy" id="bgred">立即抢购</a>
+								</div>
+							</div>
+						</div>
+						<!-- 11:00 -->
+						<div class="hideno">
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/4db7e669c7715267fa27fa25bb8cae65.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">88.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+						</div>
+						<!-- 14:00 -->
+						<div class="hideno">
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/4bef0dc46ce7ebb71b770ae3c5bdde32.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">99.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+						</div>
+						<!-- 16:00 -->
+						<div class="hideno">
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/3e8a1e7f201b1ac716601383df36935a.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">99.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+						</div>
+						<!-- 20:00 -->
+						<div class="hideno">
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/1f0fc3b14fdaac013d8c0c7b3503e992.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">99.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+						</div>
+						<!-- 22:00 -->
+						<div class="hideno">
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/74d0c7eb9d897c50b5b8ee52e6c7bc4e.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">99.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+						</div>
+						<!-- 明日预告 -->
+						<div class="hideno">
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/00c37b3ae7f01aa216a4ac76ca7af8e8.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">99.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+							<div class="single">
+								<div class="sang">
+									<img src="public/images/a165b6b70084bc0af35d4585a6fe379f.jpg" alt="">
+									<div class="sale-label-box"></div>
+									<div class="goods">豪爵MaxPower 雪拉瑞成犬纯种粮 健康减少结石3kg</div>
+									<div class="mt">
+										￥
+										<span class="ft20">75.00</span>
+										<span class="ft12">99.00</span>
+									</div>
+									<div class="jdt">
+										<span class="dic"></span>
+									</div>
+								</div>
+								<div class="mt15">
+									<a href="" class="buy">已结束</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- 选项卡区块开始 -->
+		<!-- 狗狗主粮 -->
+		<div class="epetfoot">
+			<div class="headline">
+				<div class="linel">
+					<i  class="linelbg1"></i>
+					<span>狗狗主粮</span>
+				</div>
+				<ul class="liner">
+					<li class="chose"><span>热门</span><i class="in"></i></li>
+					<li><span>进口狗粮</span><i></i></li>
+					<li><span>国产狗粮</span><i></i></li>
+					<li><span>散装狗粮</span><i></i></li>
+					<li><span style="border-right:none ">处方狗粮</span><i></i></li>
+				</ul>
+			</div>
+			<div class="picture">
+				<div class="picturel picturebg1">
+					<div class="newhot">
+						<div class="hotkind">
+							<span class="f1">——————————————————</span>
+							<i></i>
+							<b>最热HOT</b>
+							<span class="spant">——————————————————</span>
+						</div>
+						<ul>
+							<li class="f1 ftc">
+								<a href="">比瑞吉爆款</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">麦德琳</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">美士</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">天然蓝氏</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">K9Natural</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">安娜玛特</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">回归原野</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">雷米高</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">95%含肉量</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="picturer">
+				<div class="slicebig">
+					<div class="picT">
+						<div class="bluel">
+							<div class="asfont">
+								<p class="font1">蓝氏 新品冻干粮</p>
+								<p class="font2">营养高吸收</p>
+							</div>
+						</div>
+						<div class="bluer">
+							<div class="blbt">
+								<div class="asfont">
+								<p class="font1">伯纳天纯天然粮</p>
+								<p class="font2">单品直降100</p>
+							</div>
+							</div>
+						<div class="blbb">
+							<div class="asfont">
+								<p class="font1">雷米高主粮全场特惠 </p>
+								<p class="font2">满59送10 满129送78</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="picb">
+						<div class="ppap">
+							<img src="public/images/eebfca993eb2705335ef59e494e33b61.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap">
+							<img src="public/images/2e8e05c1cb3ebcfb7fbc824f276632e9.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap" style="border-right:none ">
+							<img src="public/images/80b1c41726138a123c6f18287bbc311c.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">比瑞吉 </p>
+								<p class="font2">北欧天然粮</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/338ea313b92c7f50d32645aa46ca72e7.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/c3a4e8a1236e7e88c41570eac6a1aed1.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/0ee3f3ca95593c80a84c0cb55a205a9e.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="longimg">
+				<li >
+					<a href="">
+						<img src="public/images/92371ab34de0ea12b67028d6625c5180.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/aa9949e953c28d3570f45c8140659f92.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/dc6dfe16b53030f17b93bce641f02cfd.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/df53f688c929176398c114b9a9b2b903.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/1c0f3d0e888dfc347199f1fab46331f6.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/3fda73b587cffac6d43fe2bf92511b0e.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/ff4378947e66d2d91ecb92d60fafe046.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/c2adde2885a24e1152d744524a1d2c67.jpg" alt="">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 狗狗零食 -->
+		<div class="epetfoot">
+			<div class="headline">
+				<div class="linel">
+					<i class="linelbg2"></i>
+					<span>狗狗零食</span>
+				</div>
+				<ul class="liner">
+					<li class="chose"><span>热门</span><i class="in"></i></li>
+					<li><span>进口狗粮</span><i></i></li>
+					<li><span>国产狗粮</span><i></i></li>
+					<li><span>散装狗粮</span><i></i></li>
+					<li><span style="border-right:none ">处方狗粮</span><i></i></li>
+				</ul>
+			</div>
+			<div class="picture">
+				<div class="picturel picturebg2">
+					<div class="newhot">
+						<div class="hotkind">
+							<span class="f1">——————————————————</span>
+							<i></i>
+							<b>最热HOT</b>
+							<span class="spant">——————————————————</span>
+						</div>
+						<ul>
+							<li class="f1 ftc">
+								<a href="">比瑞吉爆款</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">麦德琳</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">美士</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">天然蓝氏</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">K9Natural</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">安娜玛特</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">回归原野</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">雷米高</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">95%含肉量</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="picturer">
+				<div class="slicebig">
+					<div class="picT">
+						<div class="bluel">
+							<div class="asfont">
+								<p class="font1">蓝氏 新品冻干粮</p>
+								<p class="font2">营养高吸收</p>
+							</div>
+						</div>
+						<div class="bluer">
+							<div class="blbt">
+								<div class="asfont">
+								<p class="font1">伯纳天纯天然粮</p>
+								<p class="font2">单品直降100</p>
+							</div>
+							</div>
+						<div class="blbb">
+							<div class="asfont">
+								<p class="font1">雷米高主粮全场特惠 </p>
+								<p class="font2">满59送10 满129送78</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="picb">
+						<div class="ppap">
+							<img src="public/images/eebfca993eb2705335ef59e494e33b61.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap">
+							<img src="public/images/2e8e05c1cb3ebcfb7fbc824f276632e9.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap" style="border-right:none ">
+							<img src="public/images/80b1c41726138a123c6f18287bbc311c.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">比瑞吉 </p>
+								<p class="font2">北欧天然粮</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/338ea313b92c7f50d32645aa46ca72e7.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/c3a4e8a1236e7e88c41570eac6a1aed1.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/0ee3f3ca95593c80a84c0cb55a205a9e.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="longimg">
+				<li >
+					<a href="">
+						<img src="public/images/92371ab34de0ea12b67028d6625c5180.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/aa9949e953c28d3570f45c8140659f92.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/dc6dfe16b53030f17b93bce641f02cfd.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/df53f688c929176398c114b9a9b2b903.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/1c0f3d0e888dfc347199f1fab46331f6.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/3fda73b587cffac6d43fe2bf92511b0e.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/ff4378947e66d2d91ecb92d60fafe046.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/c2adde2885a24e1152d744524a1d2c67.jpg" alt="">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 狗狗保健&医疗 -->
+		<div class="epetfoot">
+			<div class="headline">
+				<div class="linel">
+					<i class="linelbg3"></i>
+					<span>狗狗保健&医疗</span>
+				</div>
+				<ul class="liner">
+					<li class="chose"><span>热门</span><i class="in"></i></li>
+					<li><span>进口狗粮</span><i></i></li>
+					<li><span>国产狗粮</span><i></i></li>
+					<li><span>散装狗粮</span><i></i></li>
+					<li><span style="border-right:none ">处方狗粮</span><i></i></li>
+				</ul>
+			</div>
+			<div class="picture">
+				<div class="picturel picturebg3">
+					<div class="newhot">
+						<div class="hotkind">
+							<span class="f1">——————————————————</span>
+							<i></i>
+							<b>最热HOT</b>
+							<span class="spant">——————————————————</span>
+						</div>
+						<ul>
+							<li class="f1 ftc">
+								<a href="">比瑞吉爆款</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">麦德琳</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">美士</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">天然蓝氏</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">K9Natural</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">安娜玛特</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">回归原野</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">雷米高</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">95%含肉量</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="picturer">
+				<div class="slicebig">
+					<div class="picT">
+						<div class="bluel">
+							<div class="asfont">
+								<p class="font1">蓝氏 新品冻干粮</p>
+								<p class="font2">营养高吸收</p>
+							</div>
+						</div>
+						<div class="bluer">
+							<div class="blbt">
+								<div class="asfont">
+								<p class="font1">伯纳天纯天然粮</p>
+								<p class="font2">单品直降100</p>
+							</div>
+							</div>
+						<div class="blbb">
+							<div class="asfont">
+								<p class="font1">雷米高主粮全场特惠 </p>
+								<p class="font2">满59送10 满129送78</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="picb">
+						<div class="ppap">
+							<img src="public/images/eebfca993eb2705335ef59e494e33b61.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap">
+							<img src="public/images/2e8e05c1cb3ebcfb7fbc824f276632e9.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap" style="border-right:none ">
+							<img src="public/images/80b1c41726138a123c6f18287bbc311c.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">比瑞吉 </p>
+								<p class="font2">北欧天然粮</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/338ea313b92c7f50d32645aa46ca72e7.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/c3a4e8a1236e7e88c41570eac6a1aed1.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/0ee3f3ca95593c80a84c0cb55a205a9e.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="longimg">
+				<li >
+					<a href="">
+						<img src="public/images/92371ab34de0ea12b67028d6625c5180.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/aa9949e953c28d3570f45c8140659f92.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/dc6dfe16b53030f17b93bce641f02cfd.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/df53f688c929176398c114b9a9b2b903.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/1c0f3d0e888dfc347199f1fab46331f6.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/3fda73b587cffac6d43fe2bf92511b0e.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/ff4378947e66d2d91ecb92d60fafe046.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/c2adde2885a24e1152d744524a1d2c67.jpg" alt="">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 狗狗日用 -->
+		<div class="epetfoot">
+			<div class="headline">
+				<div class="linel">
+					<i class="linelbg4"></i>
+					<span>狗狗日用</span>
+				</div>
+				<ul class="liner">
+					<li class="chose"><span>热门</span><i class="in"></i></li>
+					<li><span>进口狗粮</span><i></i></li>
+					<li><span>国产狗粮</span><i></i></li>
+					<li><span>散装狗粮</span><i></i></li>
+					<li><span style="border-right:none ">处方狗粮</span><i></i></li>
+				</ul>
+			</div>
+			<div class="picture">
+				<div class="picturel picturebg4">
+					<div class="newhot">
+						<div class="hotkind">
+							<span class="f1">——————————————————</span>
+							<i></i>
+							<b>最热HOT</b>
+							<span class="spant">——————————————————</span>
+						</div>
+						<ul>
+							<li class="f1 ftc">
+								<a href="">比瑞吉爆款</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">麦德琳</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">美士</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">天然蓝氏</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">K9Natural</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">安娜玛特</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">回归原野</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">雷米高</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">95%含肉量</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="picturer">
+				<div class="slicebig">
+					<div class="picT">
+						<div class="bluel">
+							<div class="asfont">
+								<p class="font1">蓝氏 新品冻干粮</p>
+								<p class="font2">营养高吸收</p>
+							</div>
+						</div>
+						<div class="bluer">
+							<div class="blbt">
+								<div class="asfont">
+								<p class="font1">伯纳天纯天然粮</p>
+								<p class="font2">单品直降100</p>
+							</div>
+							</div>
+						<div class="blbb">
+							<div class="asfont">
+								<p class="font1">雷米高主粮全场特惠 </p>
+								<p class="font2">满59送10 满129送78</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="picb">
+						<div class="ppap">
+							<img src="public/images/eebfca993eb2705335ef59e494e33b61.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap">
+							<img src="public/images/2e8e05c1cb3ebcfb7fbc824f276632e9.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap" style="border-right:none ">
+							<img src="public/images/80b1c41726138a123c6f18287bbc311c.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">比瑞吉 </p>
+								<p class="font2">北欧天然粮</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/338ea313b92c7f50d32645aa46ca72e7.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/c3a4e8a1236e7e88c41570eac6a1aed1.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/0ee3f3ca95593c80a84c0cb55a205a9e.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="longimg">
+				<li >
+					<a href="">
+						<img src="public/images/92371ab34de0ea12b67028d6625c5180.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/aa9949e953c28d3570f45c8140659f92.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/dc6dfe16b53030f17b93bce641f02cfd.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/df53f688c929176398c114b9a9b2b903.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/1c0f3d0e888dfc347199f1fab46331f6.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/3fda73b587cffac6d43fe2bf92511b0e.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/ff4378947e66d2d91ecb92d60fafe046.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/c2adde2885a24e1152d744524a1d2c67.jpg" alt="">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 狗狗美容&香波 -->
+		<div class="epetfoot">
+			<div class="headline">
+				<div class="linel">
+					<i class="linelbg5"></i>
+					<span>狗狗美容&香波</span>
+				</div>
+				<ul class="liner">
+					<li class="chose"><span>热门</span><i class="in"></i></li>
+					<li><span>进口狗粮</span><i></i></li>
+					<li><span>国产狗粮</span><i></i></li>
+					<li><span>散装狗粮</span><i></i></li>
+					<li><span style="border-right:none ">处方狗粮</span><i></i></li>
+				</ul>
+			</div>
+			<div class="picture">
+				<div class="picturel picturebg5">
+					<div class="newhot">
+						<div class="hotkind">
+							<span class="f1">——————————————————</span>
+							<i></i>
+							<b>最热HOT</b>
+							<span class="spant">——————————————————</span>
+						</div>
+						<ul>
+							<li class="f1 ftc">
+								<a href="">比瑞吉爆款</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">麦德琳</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">美士</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">天然蓝氏</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">K9Natural</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">安娜玛特</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">回归原野</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">雷米高</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">95%含肉量</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="picturer">
+				<div class="slicebig">
+					<div class="picT">
+						<div class="bluel">
+							<div class="asfont">
+								<p class="font1">蓝氏 新品冻干粮</p>
+								<p class="font2">营养高吸收</p>
+							</div>
+						</div>
+						<div class="bluer">
+							<div class="blbt">
+								<div class="asfont">
+								<p class="font1">伯纳天纯天然粮</p>
+								<p class="font2">单品直降100</p>
+							</div>
+							</div>
+						<div class="blbb">
+							<div class="asfont">
+								<p class="font1">雷米高主粮全场特惠 </p>
+								<p class="font2">满59送10 满129送78</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="picb">
+						<div class="ppap">
+							<img src="public/images/eebfca993eb2705335ef59e494e33b61.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap">
+							<img src="public/images/2e8e05c1cb3ebcfb7fbc824f276632e9.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap" style="border-right:none ">
+							<img src="public/images/80b1c41726138a123c6f18287bbc311c.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">比瑞吉 </p>
+								<p class="font2">北欧天然粮</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/338ea313b92c7f50d32645aa46ca72e7.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/c3a4e8a1236e7e88c41570eac6a1aed1.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/0ee3f3ca95593c80a84c0cb55a205a9e.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="longimg">
+				<li >
+					<a href="">
+						<img src="public/images/92371ab34de0ea12b67028d6625c5180.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/aa9949e953c28d3570f45c8140659f92.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/dc6dfe16b53030f17b93bce641f02cfd.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/df53f688c929176398c114b9a9b2b903.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/1c0f3d0e888dfc347199f1fab46331f6.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/3fda73b587cffac6d43fe2bf92511b0e.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/ff4378947e66d2d91ecb92d60fafe046.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/c2adde2885a24e1152d744524a1d2c67.jpg" alt="">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 狗狗牵引&服饰&玩具 -->
+		<div class="epetfoot">
+			<div class="headline">
+				<div class="linel">
+					<i class="linelbg6"></i>
+					<span>狗狗牵引&服饰&玩具</span>
+				</div>
+				<ul class="liner">
+					<li class="chose"><span>热门</span><i class="in"></i></li>
+					<li><span>进口狗粮</span><i></i></li>
+					<li><span>国产狗粮</span><i></i></li>
+					<li><span>散装狗粮</span><i></i></li>
+					<li><span style="border-right:none ">处方狗粮</span><i></i></li>
+				</ul>
+			</div>
+			<div class="picture">
+				<div class="picturel picturebg6">
+					<div class="newhot">
+						<div class="hotkind">
+							<span class="f1">——————————————————</span>
+							<i></i>
+							<b>最热HOT</b>
+							<span class="spant">——————————————————</span>
+						</div>
+						<ul>
+							<li class="f1 ftc">
+								<a href="">比瑞吉爆款</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">麦德琳</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">美士</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">天然蓝氏</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">K9Natural</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">安娜玛特</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">回归原野</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">雷米高</a>
+							</li>
+							<li class="f1 ftc">
+								<a href="">95%含肉量</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="picturer">
+				<div class="slicebig">
+					<div class="picT">
+						<div class="bluel">
+							<div class="asfont">
+								<p class="font1">蓝氏 新品冻干粮</p>
+								<p class="font2">营养高吸收</p>
+							</div>
+						</div>
+						<div class="bluer">
+							<div class="blbt">
+								<div class="asfont">
+								<p class="font1">伯纳天纯天然粮</p>
+								<p class="font2">单品直降100</p>
+							</div>
+							</div>
+						<div class="blbb">
+							<div class="asfont">
+								<p class="font1">雷米高主粮全场特惠 </p>
+								<p class="font2">满59送10 满129送78</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="picb">
+						<div class="ppap">
+							<img src="public/images/eebfca993eb2705335ef59e494e33b61.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap">
+							<img src="public/images/2e8e05c1cb3ebcfb7fbc824f276632e9.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">泰迪幼犬粮 </p>
+								<p class="font2">健康膳食，靓丽皮毛</p>
+							</div>
+						</div>
+						<div class="ppap" style="border-right:none ">
+							<img src="public/images/80b1c41726138a123c6f18287bbc311c.jpg" alt="">
+							<div class="qwfont">
+								<p class="font1">比瑞吉 </p>
+								<p class="font2">北欧天然粮</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/338ea313b92c7f50d32645aa46ca72e7.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/c3a4e8a1236e7e88c41570eac6a1aed1.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="slicebig">
+					<ul class="repeat">
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/0ee3f3ca95593c80a84c0cb55a205a9e.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+						<li class="f1">
+							<div class="proimg">
+								<img src="public/images/e43e994606cc02d6f5a6d99681d57d80.jpg" alt="" class="zom">
+							</div>
+							<h1><鱼子酱Canine Caviar 特殊需求配方犬粮(低敏/减肥/老犬) 24磅(10.88kg)</h1>
+							<div class="font-1">
+								￥498.00
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="longimg">
+				<li >
+					<a href="">
+						<img src="public/images/92371ab34de0ea12b67028d6625c5180.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/aa9949e953c28d3570f45c8140659f92.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/dc6dfe16b53030f17b93bce641f02cfd.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/df53f688c929176398c114b9a9b2b903.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/1c0f3d0e888dfc347199f1fab46331f6.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/3fda73b587cffac6d43fe2bf92511b0e.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/ff4378947e66d2d91ecb92d60fafe046.jpg" alt="">
+					</a>
+				</li>
+				<li >
+					<a href="">
+						<img src="public/images/c2adde2885a24e1152d744524a1d2c67.jpg" alt="">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="topline">
+			<div class="topline-font">
+				E宠头条
+			</div>
+			<div class="toplinebox">
+				<div class="tlboxl">
+					<ul>
+						<li>
+							<img src="public/images/1aa34a1bd68e309cc20b5a57301881ba.jpg" alt="">
+							<div class="tlcontent">
+								<h1>
+									<a href="" class="asize-1">宠物电商元老E宠商城 引领宠友进入“它消费”新时代</a>
+									<a href="">
+										<span class="spansize1">资讯>></span>
+									</a>
+								</h1>
+								<p>　　据调查，过去10年里中国的宠物数量增长了500%，宠物消费市场额在近几年有望达到400亿元人民币，“它消费”呈现出了强劲的发展势头。
+								</p>
+							</div>
+						</li>
+						<li>
+							<img src="public/images/9f33133915c899e3deb4797b4131c642.jpg" alt="">
+							<div class="tlcontent">
+								<h1>
+									<a href="" class="asize-1">E宠商城自营物流 成宠物电商物流新风向</a>
+									<a href="">
+										<span class="spansize1">资讯>></span>
+									</a>
+								</h1>
+								<p>E宠商城自2009年7月上线至今，重点打造自营物流体系，并在重庆、上海、香港分别建立了自营仓储中心，每年存储销售宠物用品品类超3万种。在领域专业度、用户满意度、购买体验度上都取得飞跃性突破，已挤首为宠友使用率极高的宠物用品B2C平台。
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="tlboxr">
+					
+				</div>
+			</div>
+		</div>
+		<div class="praise">
+			<div class="topline-font">
+				E宠口碑
+			</div>
+			<div class="praisebox">
+				<div class="topnewrl">
+					<ul class="longbox">
+						<li class="longboxli">
+							<ul class="titleli">
+								<li>葭**衿</li>
+								<li>加入E宠1年9月</li>
+								<li>宠物：博美 </li>
+								<li>0岁</li>
+								<li>四川省--成都市 </li>
+								<li>第33次购买</li>
+							</ul>
+							<div class="photopete">
+								<img src="public/images/photo1.jpg" alt="">
+							</div>
+							<div class="titlefont">
+								<div>
+								
+								从家里面的小家伙到家开始，两年了一直在E宠买东西，因为E宠的东西质量还是不错，关键售后服务态度很棒，有什么问题第一时间为顾客处理好，比淘宝靠谱多了，现在家里面又添了只猫咪，猫粮，猫用品也都在E宠买了，值得信赖
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="topnewr">
+					<div class="doglogo">
+						<img src="public/images/doglogo.png" alt="">
+						<span>e***W</span>
+					</div>
+					<div class="evaluate">
+						<i></i>
+						<span>醇香、顺滑、美味可口的哈格芝麻酸奶棒 我们家的狗子很喜欢 爱吃 已回购了N多次了 奶酪吃了好哦 既能美毛又可补钙 因制一公斤的奶酪大约需要十公斤的鲜奶 所以奶酪是奶制品中的精华 又被称为奶黄金 其营养价值远远超过了鲜奶和奶粉 此哈格宠物奶酪适合幼小、体重5公斤以内的超小型犬、小型犬、中型及大型犬都可以选用 不愧为零食中的上品 只要是对狗宝身体有益的都会长期回购。</span>
+					</div>
+					<i class="pun"></i>
+				</div>
+			</div>
+		</div>
+		<div class="public">
+			<div class="publictop">
+				<span>TA公益</span>
+				<span>了解TA公益>></span>
+			</div>
+			<div class="publicbody">
+				<div class="publicfont">
+					截止今日，TA公益已联合E宠商城和
+					<span class="spanfont">15</span>
+					家品牌
+				</div>
+				<div class="publicfont">
+					累计捐赠
+					<strong style="font-size: 30px">907,162.66</strong>
+					元
+				</div>
+				<div class="publicfont">
+					已合作
+					<span class="spanfont">7</span>
+					家公益组织，举办参与
+					<span class="spanfont">2</span>
+					场公益活动，助养
+					<span class="spanfont">30</span>
+					位领养人
+				</div>
+				<div class="sponsor">
+					<div>
+						<img src="public/images/business-tit.jpg" alt="">
+					</div>
+				</div>
+				<div class="publicscr">
+					<div class="imgpub">
+						<img src="public/images/epetlogo.jpg" alt="">
+						<p>
+							已捐助
+							<b>￥212,729.57</b>
+						</p>
+					</div>
+					<div class="pubscrlong">
+						<ul>
+							<li class=""><img src="public/images/637879a33f1ea84ccdbfa2dc1b3de16e.jpg" alt="">
+								<p>
+								已捐助
+								<b>￥212,729.57</b>
+								</p>
+							</li>
+							<li class=""><img src="public/images/637464d2d4b5e633ea96defff50f0573.jpg" alt="">
+								<p>
+								已捐助
+								<b>￥212,729.57</b>
+							</p>
+							</li>
+							<li class=""><img src="public/images/31b7dfdd08ce602f1239ae8ce7954802.jpg" alt="">
+								<p>
+								已捐助
+								<b>￥212,729.57</b>
+							</p>
+							</li>
+							<li class=""><img src="public/images/d9e05c4a2d35c88ffee0dcec98fba6a4.jpg" alt="">
+								<p>
+								已捐助
+								<b>￥212,729.57</b>
+							</p>
+							</li>
+							<li class=""><img src="public/images/92371ab34de0ea12b67028d6625c5180.jpg" alt="">
+								<p>
+								已捐助
+								<b>￥212,729.57</b>
+							</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="pubbot">
+					<div class="pubbig">
+						<div class="pig">
+							<img src="public/images/3.jpg" alt="">
+							<b class="bfont1">小***_</b>
+							<b class="bfont2">48秒前购买了</b>
+							<img src="public/images/c8f8e74def9323b301d94e6e69d79500.jpg" alt="">
+							<a href="">《它时代》2017年6月刊 普通A版</a>
+							<b class="bfont2">为流浪小动物奉献了</b>
+							<b class="bfont3">￥0.0001</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="ft">
+			<div class="foottop">
+				<ul>
+					<li>
+						<a href="" class="aa">绝对的正品</a>
+					</li>
+					<li>
+						<a href="" class="bb">绝对的正品</a>
+					</li>
+					<li>
+						<a href="" class="cc">绝对的正品</a>
+					</li>
+					<li>
+						<a href="" class="dd">绝对的正品</a>
+					</li>
+					<li>
+						<a href="" class="ee">绝对的正品</a>
+					</li>
+					<li>
+						<a href="" class="ff">绝对的正品</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-wrapper">
+				<div class="wrapperone">
+					<div class="footer-phone">
+						<img src="public/images/dog_phone.gif" class="f1" alt="">
+						<div class="footer-number">
+							<h2>服务热线:</h2>
+							<p class="ftp">
+								400-888-9200
+								<span>(免长途费)</span>
+							</p>
+							<p class="ftp">023-65584888</p>
+							<p class="ftp2">工作时间：09:00--21:00</p>
+						</div>
+						<div class="pay-style">
+							<h2 class="ft14 c666 bold">支付方式</h2>
+							<p class="ft14 c666 mt20"><a href="">货到付款</a></p>
+							<p class="ft14 c666 mt5"><a href="">余额支付</a></p>
+							<p class="ft14 c666 mt5"><a href="">在线支付</a></p>
+						</div>
+						<dic class="pesisong-style">
+							<h2 class="ft14 c666 bold">配送方式</h2>
+							<p class="ft14 c666 mt20"><a href="">E宠快递</a></p>
+							<p class="ft14 c666 mt5"><a href="">外包快递</a></p>
+							<p class="ft14 c666 mt5"><a href="">物流运输</a></p>
+							<p class="ft14 c666 mt5"><a href="">公司地址</a></p>
+						</dic>
+						<dic class="pesisong-style">
+							<h2 class="ft14 c666 bold">购物指南</h2>
+							<p class="ft14 c666 mt20"><a href="">退换货政策</a></p>
+							<p class="ft14 c666 mt5"><a href="">它时代杂志</a></p>
+							<p class="ft14 c666 mt5"><a href="">常见问题</a></p>
+							<p class="ft14 c666 mt5"><a href="">宠物知识</a></p>
+						</dic>
+						<dic class="pesisong-style">
+							<h2 class="ft14 c666 bold">关于我们</h2>
+							<p class="ft14 c666 mt20"><a href="">关于我们</a></p>
+							<p class="ft14 c666 mt5"><a href="">仓储中心</a></p>
+							<p class="ft14 c666 mt5"><a href="">联系我们</a></p>
+							<p class="ft14 c666 mt5"><a href="">人才招聘</a></p>
+						</dic>
+					</div>
+					<div class="app-code">
+						<p class="ftc1 ft12-1">扫描下载APP</p>
+						<p class="ftc1 ft12-1">下单更优惠</p>
+						<a href="">
+							<img src="public/images/dw2.png" alt="">
+						</a>
+					</div>
+					<div class="wx-code">
+						<p class="ftc1 ft12-1">扫描关注E宠</p>
+						<p class="ftc1 ft12-1">商城微信</p>
+						<a href="">
+							<img src="public/images/app-code.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="wrappertwo">
+					<div class="wrt">
+						<span class="c999 mr5">友情链接：</span>
+						<span>
+							<a href="" class="c999">E宠猫用品</a>
+							<a href="" class="c999">骨头网</a>
+							<a href="" class="c999">宠物用品</a>
+							<a href="" class="c999">钓鱼网</a>
+							<a href="" class="c999">狗粮价格</a>
+							<a href="" class="c999">淘狗网</a>
+							<a href="" class="c999">重庆宠物</a>
+							<a href="" class="c999">宠物狗</a>
+							<a href="" class="c999">淘宝返利</a>
+							<a href="" class="c999">9块9包邮</a>
+							<a href="" class="c999"> 披萨</a>
+							<a href="" class="c999">品牌折扣网</a>
+							<a href="" class="c999">大连分类信息</a>
+							<a href="" class="c999">礼物网</a>
+							<a href="" class="c999">山东网</a>
+							<a href="" class="c999">驴友网</a>
+							<a href="" class="c999">服装资讯</a>
+							<a href="" class="c999">1折网</a>
+						</span>
+					</div>
+				</div>
+				<div class="wrapperthree">
+					<a href="">
+						<img src="public/images/360.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/chengxin.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/shiming.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/tx.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/jybz.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/cqgs.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/baiq.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/wsls.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/sfqy.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/yxqy.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/bhdw.png" alt="">
+					</a>
+					<a href="">
+						<img src="public/images/sjws.png" alt="">
+					</a>
+				</div>		
+				<div class="wrapperfour">
+					<p class="ftc1 ft12-1">渝ICP备13005525号-2　渝ICP备10002905　增值电信业务经营许可证：渝B2-20140042 Copyright © 2007-2017 epet.com 　重庆易宠科技有限公司</p>
+				</div>		
+			</div>
+		</div>
+	</footer>
+	
+	<aside>
+		<ul>
+			<li class="aslogo">
+				<a href=""><span></span></a>
+				<div>
+					<span>您还没有登录，请先
+					<a href="">登录</a>。
+					</span>
+				</div>
+			</li>
+			<li class="asshopcar">
+				<a href="">
+					<span class="ascarspan1"></span>
+					<span class="ascarspan2">购物车
+						<span class="ascarspan3">0</span>
+					</span>
+				</a>
+				<div>
+					<span>您的购物车中暂无商品，赶快选择心爱的商品吧！</span>
+					<a href="#"><p>取出寄存的商品</p></a>
+				</div>
+			</li>
+			<li class="asser">
+				<a href="">
+					<span class="asser1"></span>
+					<span class="ascarspan2">在线客服</span>
+				</a>
+			</li>
+			<li class="asorder">
+				<a href="">
+					<span></span>
+				</a>
+				<div>
+					我的订单
+				</div>
+			</li>
+			<li class="ashistory">
+				<a href="">
+					<span></span>
+				</a>
+			</li>
+			<li class="ascode">
+				<a href="">
+					<span></span>
+				</a>
+			</li>
+			<li class="gotop">
+				<a href="#"><span></span></a>
+				<div>
+					回到顶部
+				</div>
+			</li>
+		</ul>
+	</aside>
+
+<script>
+
+
+</script>
+<script src="public/js/index.js"></script>
+<script src="public/js/city-picker.data.js"></script>
+<script src="public/js/city-picker.js"></script>
+<script src="public/js/city-picker-one.js"></script>
+</body>
+</html>
